@@ -1,0 +1,143 @@
+<!Doctype HTML>
+<html lang="en-US">
+<head>
+<meta charset = "UTF-8">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, user-scalable=yes"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- All CSS Files-->
+<link rel = "stylesheet" href = "/a/css/bootstrap.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel = "stylesheet" href = "/a/css/w3css.css">
+<link rel = "stylesheet" href = "/a/css/search.css">
+<link rel = "stylesheet" href = "/a/css/site.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Restaurant Details</title>
+</head>
+<body>
+<!-- Header-->
+  <header class="bg-image-header">
+      <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-3 col-xs-12 text-left" style="margin-top:20px;margin-left:20px" >
+              <div class="myfont"><span style="font-size:45px">&Hscr;</span>APPY FOODING</div>
+          </div>
+          <div style="margin-top:40px">
+             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="input-group">
+                  <span class="input-group-addon" ></span>
+                  <select class="form-control text-center" style="magin-left:15px" disabled>
+                     <option>New Delhi</option>
+                  </select>
+              </div>
+          </div>
+             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12" style = 'margin-left:30px;'>
+               <i class="fa fa-facebook-official icons-alter" style="color:navy;font-size:25px;"></i>
+                <i class="fa fa-linkedin-square icons-alter" style="color:brown;font-size:25px;"></i>
+               <i class="fa fa-twitter-square icons-alter" style="color:#00CED1;font-size:25px;"></i>
+          </div>
+          </div>
+      </div>
+       <!-- Navigation Bar containing quick searches and localities link and home page and it should be fixed -->
+</header>
+  <!-- Navigation Bar-->
+   <nav class="navbar navbar-default">
+       <div class="container-fluid">
+           <div class="navbar-header">
+               <div class=" myfont"><i>Delhi Hotels</i></div>
+           </div>
+           <ul class="nav navbar-nav navbar-left" style = 'margin-left:100px;'>
+               <li><a href="/collect_delhi">Collections</a></li>
+               <li><a href="/quick_delhi">Quick Searches</a></li>
+               <li class = 'active'><a href="/orders">My Orders</a></li>
+           </ul>
+           <ul class="nav navbar-nav navbar-right" style = 'margin-right:40px;'>
+               <li><a href="/home">Home Page</a></li>
+               <li><a href="/">Logout</a></li>
+           </ul>
+        </div>
+</nav>
+    <div  class = 'row'>
+        <div class = 'col-lg-8 col-md-8 col-sm-12 col-xs-12'>
+            <div ng-app = 'myApp' ng-controller = 'Ctrl_orders'>
+                 <div class = 'w3-card-4 order_card w3-white ' id = 'order' style = 'display:none;'>
+                     <div class = 'row'>
+                         <div id = 'order_get'></div>
+                        <div class = 'col-lg-6 col-md-7 col-sm-4 col-xs-10'>
+                         <h3 class = 'color_navy'>Dishes Ordered are</h3><div id = 'mydish'></div>
+                       </div>
+                       <div class = 'col-lg-3 col-md-2 col-sm-4 col-xs-10'>
+                         <h3 class = 'color_navy'>Quantity</h3>
+                         <div id = 'myquantity'></div>
+                       </div>
+                       <div class = 'col-lg-3 col-md-2 col-sm-4 col-xs-10'>
+                         <h3 class = 'color_navy'>Pricing</h3>
+                         <div id = 'myprice'></div>
+                       </div>
+                     </div>
+                    <div class = 'row text-center'>
+                       <div id = 'cost'></div>
+                    </div>
+                     <div class = 'text-center' style = 'margin-bottom: 15px;'>
+                        <button class = 'btn btn-lg btn-danger' id = 'delete'></button>
+                         <button class = 'btn btn-lg btn-success' id = 'comp'></button>
+                    </div>
+                 </div>
+                 
+            </div>
+        </div>
+    </div>
+             <footer>
+    <div class="container text-left">
+        <div class="row " >
+            <div class="col-m-5 col-lg-3 col-xs-6 ">
+                <div class="myfont" style="margin-top:5px" ><i><span style="font-size:45px">&Hscr;</span>APPY FOODING</i></div>
+                <ul class="list-group ">
+                    <li>About Us</li>
+                    <li >Culture</li>
+                    <li>Blog</li>
+                    <li >Careers</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="col-m-5 col-lg-3 col-xs-6">
+                <div class="myfont2" style="margin-top:5px" ><i><span style="font-size:45px">&Fscr;</span>ind Your Favourite</i></div>
+                <ul>
+                    <li>Code of Conduct</li>
+                    <li>Community</li>
+                    <li>Verified Users</li>
+                    <li>Blogger Help</li>
+                    <li>Developers</li>
+                    <li>Mobile Apps</li>
+                </ul>
+            </div>
+            <div class="col-m-5 col-lg-3 col-xs-6">
+                <div class="myfont2" style="margin-top:5px" ><i><span style="font-size:45px">&Rscr;</span>estuarants here &</i></div>
+                <ul>
+                    <li>Add a Restaurant</li>
+                    <li>Claim your Listing</li>
+                    <li>Business App</li>
+                    <li>Business Blog</li>
+                    <li>Restaurant Widgets</li>
+                    <li>Products for Businesses</li>
+                </ul>
+            </div>
+            <div class="col-m-5 col-lg-3 col-xs-6">
+                <div class="myfont2" style="margin-top:5px" ><i><span style="font-size:45px">&Hscr;</span>APPY FOODING</i></div>
+                <ul>
+                    <li>Privacy </li>
+                    <li>Terms and Conditions</li>
+                    <li>API Policy </li>
+                    <li>CSR</li>
+                    <li>Security</li>
+                    <li>Site Map</li>
+                </ul>
+                    </div>
+        </div>
+        </div>
+</footer>
+<script src="/a/js/jquery.js"></script>
+<script src="/a/js/bootstrap.js"></script>
+<script src="/a/js/angular.js"></script>
+<script src="/a/js/restaurants.js"></script>
+</body>
+</html>

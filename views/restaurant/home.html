@@ -1,0 +1,599 @@
+<!Doctype HTML>
+<html lang="en-US">
+<head>
+<meta charset = "UTF-8">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, user-scalable=yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- All CSS Files-->
+<link rel = "stylesheet" href = "/a/css/bootstrap.css">
+<link rel = "stylesheet" href = "/a/css/w3css.css">
+<link rel = "stylesheet" href = "/a/css/site.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body style="background-color: lightgrey">
+<!-- Header-->
+<header class = 'bg_image'>
+  <div class="row">
+     <nav class="navbar navbar-default" style  = ' margin-top:25px;'>
+         <div class="container-fluid">
+             <div class="navbar-header">
+                 <div class=" myfont"><i><span style="font-size:45px">&Hscr;</span>APPY FOODING</i>
+                 </div>
+             </div>
+             <ul class="nav navbar-nav navbar-left font_big" style = 'margin-left:100px;'>
+               <li><a href="#collect">Collections</a></li>
+               <li><a href="#quick-search">Quick Searches</a></li>
+               <li><a href="#localities">Localities</a></li>
+           </ul>
+             <ul class="nav navbar-nav navbar-right font_big" style = 'margin-right:40px;'>
+               <li><a href="/main">Home Page</a></li>
+               <li><a href="/">Logout</a></li>
+           </ul>
+         </div>
+      </nav>      
+  </div>
+    <div class="row">
+        <div class="col-md-12 text-center col-xs-12" style="margin-top:100px" >
+            <div class="myfont" style="font-size:52px"><span style="font-size:65px">&Hscr;</span>APPY FOODING</div>
+            <h1 style="color:#fff">Find your Favourite restaurants in the town </h1>
+        </div>
+    </div>           
+</header>
+ <!-- Search Your Restaturants-->
+<section ng-app=''>
+     <div class="row" style="margin-top:15px">
+         <div class="col-lg-8 col-xs-12">
+              <h1  class="text-center" style="color:#003399;">Get Your Favorite Hotels in Your Town Here!!</h1>
+         </div>
+         <div class="col-lg-3 col-xs-12">
+<!-- Selecting the cities from one of these-->
+          <select class="form-control text-center" ng-model="myVar" id="city" style="margin-top:25px">
+            <option>New Delhi</option>
+            <option>Mumbai</option>
+            <option>Hyderabad</option>
+          </select>
+         </div>
+     </div>
+<!-- Using Angular JS to show one city and hide others-->
+    <div ng-switch="myVar">
+<!-- For New-Delhi-->
+    <div ng-switch-when="New Delhi">
+<!-- Our Collections -->
+    <section>
+        <h3 class="text-left cityhead" id="collect">Our Collections in New-Delhi</h3>
+        <div class="row">
+            <div class="col-lg-5 col-sm-6 col-xs-9">
+                <a href="/collect_delhi"><div class="well bg-color" style="margin-left:110px">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-7 col-xs-10">
+                            <img src="/a/images/hotel1.jpg" alt="Trending Hotels are here" class="images"/>
+                        </div>
+                        <div class="col-lg-8 col-sm-9 col-xs-11">
+                            <div class="text-left">
+                                <h3 class="img-head">Trending Now</h3>
+                                <h5 class="img-description">The most popular restaurants in town this week</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-xs-9">
+                <a href="/collect_delhi"><div class="well bg-color" style="margin-left:110px">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-7 col-xs-10 ">
+                          <img src="/a/images/hotel2.jpg" alt="New Hotels are here" class="images"/>
+                        </div>
+                         <div class="col-lg-8 col-sm-9 col-xs-11">
+                            <div class="text-left">
+                                <h3 class="img-head">Newly Opened</h3>
+                                <h5 class="img-description">The newly opened restaurants in town this week</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+        </div>
+       <div class="row">
+            <div class="col-lg-5 col-sm-6 col-xs-9">
+                <a href="/collect_delhi"><div class="well bg-color" style="margin-left:110px">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-7 col-xs-10">
+                            <img src="/a/images/hotel3.jpg" alt="Luxury Hotels are here" class="images"/>
+                        </div>
+                        <div class="col-lg-8 col-sm-9 col-xs-11">
+                            <div class="text-left">
+                                <h3 class="img-head">Luxury Dining</h3>
+                                <h5 class="img-description">The most popular restaurants for a fine luxury dinner are..</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-xs-9">
+                <a href="/collect_delhi"><div class="well bg-color" style="margin-left:110px">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-7 col-xs-10">
+                          <img src="/a/images/hotel4.jpg" alt="Happy Hour Hotels are here" class="images"/>
+                        </div>
+                         <div class="col-lg-8 col-sm-9 col-xs-11">
+                            <div class="text-left">
+                                <h3 class="img-head">Happy Hours</h3>
+                                <h5 class="img-description">Grab the best deals here. Really Happy Hours!!</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+        </div>
+    </section>
+<!-- Quick Searches-->
+    <section>
+    <h3 class="text-left cityhead" id="quick-search">Quick Searches</h3>
+     <h4 class="text-muted" style="margin-left:38px">Discover Restaurants by your choice </h4>
+     <div class="row">
+       <div class="col-lg-10 col-sm-8 well col-xs-6" style="margin-left:120px;background-color:#ffffff;">
+           <div class="text-center">
+               <div class="col-lg-1 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/lunch.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Lunch</h4>
+               </div>
+               <div class="col-lg-2 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/dinner.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Dinner</h4>
+               </div>
+               <div class="col-lg-1 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/breakfast.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Breakfast</h4>
+               </div>
+               <div class="col-lg-2 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/drinks.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Drinks</h4>
+               </div>
+               <div class="col-lg-1 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/pizza.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Pizza</h4>
+               </div>
+               <div class="col-lg-2 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/burger.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Burgers</h4>
+               </div>
+               <div class="col-lg-1 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/cafe.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Cafes</h4>
+               </div>
+               <div class="col-lg-2 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/snacks.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Snacks</h4>
+               </div>
+           </div>
+       </div>
+     </div>
+    </section>
+<!-- Localities of the city -->
+    <section>
+        <h3 class="text-left cityhead" id="localities">Localities in the City </h3>
+        <h4 class="text-muted" style="margin-left:38px">Select the restaurant nearest to your place with us</h4>
+        <div class="row">
+             <div class="col-lg-10 col-sm-8 col-xs-7 well " style="margin-left:120px;background-color:#ffffff;">
+               <div class="text-left">
+                  <div class="row">
+                       <div class = "col-lg-4 md-5">
+                           <ul class="list-group ">
+                               <a href="/local_delhi"><li class="localities-list">Connaught Place<span class="grey-text"> (110 places)</span></li></a>
+                               <a href="/local_delhi"><li class="localities-list"> DLF Cyber City<span class="grey-text"> (120 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Indirapuram<span class="grey-text"> (140 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Hauz Khas<span class="grey-text"> (78 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list"> Greater Kaliash<span class="grey-text"> (70 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Janpath<span class="grey-text"> (60 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list"> Janakpuri<span class="grey-text"> (30 places)</span></li> </a>
+                           </ul>
+                       </div>
+                       <div class = "col-lg-4 md-5">
+                           <ul class="list-group ">
+                               <a href="/local_delhi"><li class="localities-list">Sector 29 Gurgaon<span class="grey-text"> (78 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Sector 18<span class="grey-text"> (56 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Rajouri Garden<span class="grey-text"> (89 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Chanakyapuri<span class="grey-text"> (90 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Malviya Nagar<span class="grey-text"> (97 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Rk Puram<span class="grey-text"> (110 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Sector 50 Gurgaon<span class="grey-text"> (59 places)</span></li> </a>
+                           </ul>
+                       </div>
+                       <div class = "col-lg-4 md-5">
+                           <ul class="list-group ">
+                               <a href="/local_delhi"><li class="localities-list">MG Road, Gurgaon<span class="grey-text"> (340 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">DLF Phase 3<span class="grey-text"> (210 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Pritampura<span class="grey-text"> (240 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Netaji Subhash Place<span class="grey-text"> (129 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Khan Market<span class="grey-text"> (109 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Saket<span class="grey-text"> (78 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Defence Colony<span class="grey-text"> (90 places)</span></li> </a>
+                           </ul>
+                       </div>
+                  </div>
+               </div>
+             </div>
+        </div>
+    </section>
+    </div>
+<!--For Mumbai-->
+    <div ng-switch-when="Mumbai">
+<!-- Our Collections -->
+    <section>
+        <h3 class="text-left cityhead" id="collect">Our Collections in Mumbai</h3>
+        <div class="row">
+            <div class="col-lg-5 col-sm-6 col-xs-9 ">
+                <a href="/collect_delhi"><div class="well bg-color" style="margin-left:110px">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-7 col-xs-10">
+                            <img src="/a/images/hotel5.jpg" alt="Trending Hotels are here" class="images"/>
+                        </div>
+                        <div class="col-lg-8 col-sm-9 col-xs-11">
+                            <div class="text-left">
+                                <h3 class="img-head">Trending Now</h3>
+                                <h5 class="img-description">The most popular restaurants in town this week</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-xs-9">
+                <a href="/collect_delhi"><div class="well bg-color" style="margin-left:110px">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-7 col-xs-10">
+                          <img src="/a/images/hotel6.jpg" alt="New Hotels are here" class="images"/>
+                        </div>
+                         <div class="col-lg-8 col-sm-9 col-xs-11">
+                            <div class="text-left">
+                                <h3 class="img-head">Newly Opened</h3>
+                                <h5 class="img-description">The newly opened restaurants in town this week</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+        </div>
+       <div class="row">
+            <div class="col-lg-5 col-sm-6 col-xs-9">
+                <a href="/collect_delhi"><div class="well bg-color" style="margin-left:110px">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-7 col-xs-10">
+                            <img src="/a/images/hotel7.jpg" alt="Luxury Hotels are here" class="images"/>
+                        </div>
+                        <div class="col-lg-8 col-sm-9 col-xs-11">
+                            <div class="text-left">
+                                <h3 class="img-head">Arabian Nights</h3>
+                                <h5 class="img-description">The beautiful nights with dinner are..</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-xs-9">
+                <a href="/collect_delhi"><div class="well bg-color" style="margin-left:110px">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-7 col-xs-10">
+                          <img src="/a/images/hotel8.jpg" alt="New Hotels are here" class="images"/>
+                        </div>
+                         <div class="col-lg-8 col-sm-9 col-xs-11">
+                            <div class="text-left">
+                                <h3 class="img-head">Happy Hours</h3>
+                                <h5 class="img-description">Grab the best deals here. Really Happy Hours!!</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+        </div>
+        </section>
+<!-- Quick Searches-->
+    <section>
+    <h3 class="text-left cityhead" id="quick-search">Quick Searches</h3>
+     <h4 class="text-muted" style="margin-left:38px">Discover Restaurants by your choice </h4>
+     <div class="row">
+       <div class="col-lg-10 col-sm-8 col-xs-6 well" style="margin-left:120px;background-color:#ffffff;">
+           <div class="text-center">
+               <div class="col-lg-1 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/chinese.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Chinese</h4>
+               </div>
+               <div class="col-lg-2 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/bakery.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Bakery</h4>
+               </div>
+               <div class="col-lg-1 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/icecream.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Ice-Cream</h4>
+               </div>
+               <div class="col-lg-2 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/drinks.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Drinks</h4>
+               </div>
+               <div class="col-lg-1 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/lunch.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Lunch</h4>
+               </div>
+               <div class="col-lg-2 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/vadapao.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Vadapao</h4>
+               </div>
+               <div class="col-lg-1 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/cafe.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Cafes</h4>
+               </div>
+               <div class="col-lg-2 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/dinner.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Dinner</h4>
+               </div>
+           </div>
+       </div>
+     </div>
+    </section>
+<!-- Localities of the city -->
+    <section>
+        <h3 class="text-left cityhead" id="localities">Localities in the City </h3>
+        <h4 class="text-muted" style="margin-left:38px">Select the restaurant nearest to your place with us</h4>
+        <div class="row">
+             <div class="col-lg-10 col-sm-8 col-xs-7 well" style="margin-left:120px;background-color:#ffffff;">
+               <div class="text-left">
+                  <div class="row">
+                       <div class = "col-lg-4 md-5">
+                           <ul class="list-group ">
+                               <a href="/local_delhi"><li class="localities-list">Andheri East<span class="grey-text"> (110 places)</span></li></a>
+                               <a href="/local_delhi"><li class="localities-list"> Andheri West<span class="grey-text"> (120 places)</span> </li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Bandra East<span class="grey-text"> (140 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Lower Parel<span class="grey-text"> (210 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list"> Powai<span class="grey-text"> (180 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Juhu<span class="grey-text"> (210 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Khar<span class="grey-text"> (110 places)</span></li> </a>
+                           </ul>
+                       </div>
+                       <div class = "col-lg-4 md-5">
+                           <ul class="list-group ">
+                               <a href="/local_delhi"><li class="localities-list">Chembur<span class="grey-text"> (300 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Worli<span class="grey-text"> (190 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Sakinaka<span class="grey-text"> (41 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Malad West<span class="grey-text"> (410 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Vashi<span class="grey-text"> (110 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Goegaon East<span class="grey-text"> (110 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Andheri<span class="grey-text"> (210 places)</span></li> </a>
+                           </ul>
+                       </div>
+                       <div class = "col-lg-4 md-5">
+                           <ul class="list-group ">
+                               <a href="/local_delhi"><li class="localities-list">Badra Kurla<span class="grey-text"> (110 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Lokhandwala<span class="grey-text"> (80 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Chakala<span class="grey-text"> (210 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Mira Road<span class="grey-text"> (170 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Kandivali East<span class="grey-text"> (110 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Kandiwali West<span class="grey-text"> (140 places)</span> </li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Bandra West<span class="grey-text"> (90 places)</span></li> </a>
+                           </ul>
+                       </div>
+                  </div>
+               </div>
+             </div>
+        </div>
+    </section>
+    </div>
+<!-- For Hyderabad -->
+    <div ng-switch-when="Hyderabad">
+<!-- Our Collections -->
+    <section>
+        <h3 class="text-left cityhead" id="collect">Our Collections in Hyderabad</h3>
+        <div class="row">
+            <div class="col-lg-5 col-sm-6 col-xs-9">
+                <a href="/collect_delhi"><div class="well bg-color" style="margin-left:110px">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-7 col-xs-10 ">
+                            <img src="/a/images/hotel9.jpg" alt="Trending Hotels are here" class="images"/>
+                        </div>
+                        <div class="col-lg-8 col-sm-9 col-xs-11">
+                            <div class="text-left">
+                                <h3 class="img-head">Trending Now</h3>
+                                <h5 class="img-description">The most popular restaurants in town this week</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-xs-9">
+                <a href="/collect_delhi"><div class="well bg-color" style="margin-left:110px">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-7 col-xs-10">
+                          <img src="/a/images/hotel10.jpg" alt="New Hotels are here" class="images"/>
+                        </div>
+                         <div class="col-lg-8 col-sm-9 col-xs-11">
+                            <div class="text-left">
+                                <h3 class="img-head">Newly Opened</h3>
+                                <h5 class="img-description">The newly opened restaurants in town this week</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+        </div>
+       <div class="row">
+            <div class="col-lg-5 col-sm-6 col-xs-9">
+                <a href="/collect_delhi"><div class="well bg-color" style="margin-left:110px">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-7 col-xs-10">
+                            <img src="/a/images/hotel11.jpg" alt="Luxury Hotels are here" class="images"/>
+                        </div>
+                        <div class="col-lg-8 col-sm-9 col-xs-11">
+                            <div class="text-left">
+                                <h3 class="img-head">Luxury Dining</h3>
+                                <h5 class="img-description">The most popular restaurants for a fine luxury dinner are..</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+            <div class="col-lg-5 col-sm-6 col-xs-9">
+                <a href="/collect_delhi"><div class="well bg-color" style="margin-left:110px">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-7 col-xs-10">
+                          <img src="/a/images/hotel12.jpg" alt="New Hotels are here" class="images"/>
+                        </div>
+                         <div class="col-lg-8 col-sm-9 col-xs-11">
+                            <div class="text-left">
+                                <h3 class="img-head">Rooftops</h3>
+                                <h5 class="img-description">Dine like you're on the top of the world</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div></a>
+            </div>
+        </div>
+        </section>
+<!-- Quick Searches-->
+    <section>
+    <h3 class="text-left cityhead" id="quick-search">Quick Searches</h3>
+     <h4 class="text-muted" style="margin-left:38px">Discover Restaurants by your choice </h4>
+     <div class="row">
+       <div class="col-lg-10 col-sm-8 col-xs-6 well" style="margin-left:120px;background-color:#ffffff;">
+           <div class="text-center">
+               <div class="col-lg-1 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/fish.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Fish</h4>
+               </div>
+               <div class="col-lg-2 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/lunch.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Lunch</h4>
+               </div>
+               <div class="col-lg-1 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/ice-cream.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Ice-Cream</h4>
+               </div>
+               <div class="col-lg-2 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/cake.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Cakes</h4>
+               </div>
+               <div class="col-lg-1 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/cafe.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Cafe</h4>
+               </div>
+               <div class="col-lg-2 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/meat.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Meat</h4>
+               </div>
+               <div class="col-lg-1 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/dinner.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Dinner</h4>
+               </div>
+               <div class="col-lg-2 col-sm-3">
+                   <a href="/quick_delhi"><img src="/a/images/pizza.png" class="text-center size-img"></a><br>
+                   <h4 class="text-center">Chinese</h4>
+               </div>
+           </div>
+       </div>
+     </div>
+    </section>
+<!-- Localities of the city -->
+    <section>
+        <h3 class="text-left cityhead" id="localities">Localities in the City </h3>
+        <h4 class="text-muted" style="margin-left:38px">Select the restaurant nearest to your place with us</h4>
+        <div class="row">
+             <div class="col-lg-10 col-sm-8 col-xs-7 well" style="margin-left:120px;background-color:#ffffff;">
+               <div class="text-left">
+                  <div class="row">
+                       <div class = "col-lg-4 ">
+                           <ul class="list-group ">
+                               <a href="/local_delhi"><li class="localities-list">Jubliee Hills<span class="grey-text"> (110 places)</span></li></a>
+                               <a href="/local_delhi"><li class="localities-list">Hitech City<span class="grey-text"> (120 places)</span> </li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Kukatpally<span class="grey-text"> (140 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Sainikpuri<span class="grey-text"> (210 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">SD Road<span class="grey-text"> (180 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Kompally<span class="grey-text"> (210 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Madhapur<span class="grey-text"> (110 places)</span></li> </a>
+                           </ul>
+                       </div>
+                       <div class = "col-lg-4 md-5">
+                           <ul class="list-group ">
+                               <a href="/local_delhi"><li class="localities-list">Banjara Hills<span class="grey-text"> (300 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Himayath Nagar<span class="grey-text"> (190 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Abids<span class="grey-text"> (41 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Film Nagar<span class="grey-text"> (410 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Basheer Bagh<span class="grey-text"> (40 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Necklace Road<span class="grey-text"> (50 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Miyapur<span class="grey-text"> (60 places)</span></li> </a>
+                           </ul>
+                       </div>
+                       <div class = "col-lg-4 md-5">
+                           <ul class="list-group ">
+                               <a href="/local_delhi"><li class="localities-list">Gandipet<span class="grey-text"> (20 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Panjagutta<span class="grey-text"> (60 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Kondapur<span class="grey-text"> (210 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Gachibowli<span class="grey-text"> (300 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Kandivali East<span class="grey-text"> (110 places)</span></li> </a>
+                               <a href="/local_delhi"><li class="localities-list">MasabTank<span class="grey-text"> (40 places)</span> </li> </a>
+                               <a href="/local_delhi"><li class="localities-list">Tolichowki<span class="grey-text"> (90 places)</span></li> </a>
+                           </ul>
+                       </div>
+                  </div>
+               </div>
+             </div>
+        </div>
+    </section>
+</div>
+    </div>
+</section>
+<!-- Footer-->
+<footer>
+    <div class="container text-left">
+        <div class="row " >
+            <div class="col-m-5 col-lg-3 col-xs-6 ">
+               <div class="myfont" style="margin-top:5px" ><i><span style="font-size:45px">&Hscr;</span>APPY FOODING</i></div>
+                <ul class="list-group ">
+                    <li>About Us</li>
+                    <li >Culture</li>
+                    <li>Blog</li>
+                    <li >Careers</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="col-m-5 col-lg-3 col-xs-6">
+                <div class="myfont2" style="margin-top:5px" ><i><span style="font-size:45px">&Fscr;</span>ind Your Favourite</i></div>
+                <ul>
+                    <li>Code of Conduct</li>
+                    <li>Community</li>
+                    <li>Verified Users</li>
+                    <li>Blogger Help</li>
+                    <li>Developers</li>
+                    <li>Mobile Apps</li>
+                </ul>
+            </div>
+            <div class="col-m-5 col-lg-3 col-xs-6">
+                <div class="myfont2" style="margin-top:5px" ><i><span style="font-size:45px">&Rscr;</span>estuarants here &</i></div>
+                <ul>
+                    <li>Add a Restaurant</li>
+                    <li>Claim your Listing</li>
+                    <li>Business App</li>
+                    <li>Business Blog</li>
+                    <li>Restaurant Widgets</li>
+                    <li>Products for Businesses</li>
+                </ul>
+            </div>
+            <div class="col-m-5 col-lg-3 col-xs-6">
+                <div class="myfont2" style="margin-top:5px" ><i><span style="font-size:45px">&Hscr;</span>APPY FOODING</i></div>
+                <ul>
+                    <li>Privacy </li>
+                    <li>Terms and Conditions</li>
+                    <li>API Policy </li>
+                    <li>CSR</li>
+                    <li>Security</li>
+                    <li>Site Map</li>
+                </ul>
+                    </div>
+        </div>
+        </div>
+</footer>
+
+<!-- All Scripts-->
+<!-- All the Scripts-->
+<script src="/a/js/jquery.js"></script>
+<script src="/a/js/bootstrap.js"></script>
+<script src="/a/js/angular.js"></script>
+</body>
+</html>

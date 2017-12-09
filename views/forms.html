@@ -1,0 +1,129 @@
+<!Doctype HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, user-scalable=yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel = "stylesheet" href = "/a/css/bootstrap.css">
+<link rel = "stylesheet" href = "/a/css/w3css.css">
+<link rel = "stylesheet" href = "/a/css/site.css">
+<title>Register/Login</title>
+</head>
+<!-- AJS Controller used -->
+<body style = "background-image:url('/a/images/bg4.jpg')" ng-app="myapp" ng-controller="Ctrl_form">
+<!-- Registration Form-->
+<div class="container-fluid" style="margin-top:50px;" ng-show="showfirst">
+    <div class = 'w3-card-4 w3-light-gray forms'>
+       <h2 class = 'text-center'>Register Here</h2>
+       <form class="form-horizontal" name="myform" method="post" action="/register" novalidate>
+<!-- Text input-->
+         <div class="form-group">
+             <h3><label class="col-md-4 col-lg-4 col-sm-4 control-label" for="textinput">Name<sup>*</sup></label></h3>
+             <div class="col-md-7 col-lg-7 col-sm-6">
+                 <input name="fname" type="text" placeholder="John Doe" class="form-control input-md" ng-model = "fname" required><span style="color:red" ng-show = "myform.fname.$dirty && myform.fname.$invalid">Name required</span>
+             </div>
+         </div>
+<!-- Email input-->
+         <div class="form-group">
+             <h3><label class="col-md-4 col-lg-4 col-sm-4 control-label" for="textinput">Email<sup>*</sup></label></h3>
+             <div class="col-md-7 col-lg-7 col-sm-6">
+                 <input name="email" type="email" placeholder="abc@gamil.com (Should Be Unique)" class="form-control input-md" ng-model = "email"  required>
+                 <span style="color:red" ng-show = "myform.email.$dirty && myform.email.$invalid">Invalid Email </span>
+             </div>
+         </div>
+<!-- Password input-->
+         <div class="form-group">
+             <h3><label class="col-md-4 col-lg-4 col-sm-4 control-label" for="passwordinput">Password<sup>*</sup></label></h3>
+             <div class="col-md-7 col-lg-7 col-sm-6">
+                 <input  name="pswd" type="password"  id="myInput" placeholder="1 number,capital & small letter" class="form-control input-md" ng-model = "pswd" oninput="passwordValidation()" required>
+                 <span style="color:red" id = "write"></span>
+             </div>
+         </div>
+<!-- Mobile input-->
+         <div class="form-group">
+             <h3><label class="col-md-4 col-lg-4 col-sm-4 control-label" for="passwordinput">Mobile<sup>*</sup></label></h3>
+             <div class="col-md-7 col-lg-7 col-sm-6">
+                  <input  name="mobile" type="number"  min="6999999999" max="9999999999" placeholder="10 digit mobile no." class="form-control input-md"   ng-model = "mobile"  required>
+                 <span style="color:red" ng-show = "myform.mobile.$dirty && myform.mobile.$invalid">Invalid Mobile</span>
+             </div>
+         </div>
+<!-- Button (Double) -->
+         <div class="form-group">
+             <div class="col-md-6 col-lg-6 col-sm-10">
+                 <button class="btn btn-danger button1" ng-disabled="myform.email.$invalid || myform.mobile.$invalid || myform.pswd.$invalid || myform.fname.$invalid">Submit</button> 
+             </div>
+             <div class = "col-md-5 col-lg-5 col-sm-10">
+                 <button type="button" class="btn btn-info button2" ng-click = "login()">Already registered?<br>Login</button>
+             </div>
+         </div>
+     </form>
+    </div>
+</div>
+ <!-- Login form-->
+<div class="container-fluid " style="margin-top:50px;" ng-show="loginshow">
+<div class="w3-card-4 w3-light-gray forms">
+     <h2 class = 'text-center'>Login Here</h2>
+     <form class="form-horizontal" method="post" action = "/login">
+<!-- Email input-->
+         <div class="form-group">
+             <h3><label class="col-md-4 col-lg-4 col-sm-4 control-label" for="textinput">Email<sup>*</sup></label></h3>
+             <div class="col-md-7 col-lg-7 col-sm-6">
+                 <input name="email_login" type="email" placeholder="abc@gamil.com" class="form-control input-md" ng-model = "email_login"  required>
+                 <span style="color:red" ng-show = "myform.email_login.$dirty && myform.email_login.$invalid">Invalid Email </span>
+             </div>
+         </div>
+<!-- Password input-->
+         <div class="form-group">
+             <h3><label class="col-md-4 col-lg-4 col-sm-4 control-label" for="passwordinput">Password<sup>*</sup></label></h3>
+             <div class="col-md-7 col-lg-7 col-sm-6">
+                 <input  name="paswd" type="password" placeholder="Enter your password" class="form-control input-md" ng-model = "paswd" required>
+             </div>
+         </div>
+<!-- Button (Double) -->
+         <div class="form-group">
+         <div class="col-md-6 col-lg-6 col-sm-10">
+         <button  class="btn btn-danger button1"  ng-disabled="myform.email_login.$invalid">Submit</button>
+         </div>
+		 <div class="col-md-5 col-lg-5 col-sm-10">
+         <button class = "button2 btn btn-info" name="registerbutton" ng-click="register()">Register Here</button>
+         </div>
+         </div>
+     </form>
+        <div class = 'text-center'>
+            <button class = "button2 btn btn-primary" name="registerbutton" ng-click="send_mail()" >Forgot Password??</button>
+         </div>
+</div>
+</div>
+<!-- Resetting Password -->
+<div class="container-fluid " style="margin-top:50px;" ng-show="emailshow">
+<div class="w3-card-4 w3-light-gray forms">
+     <h2 class = 'text-center'>Resetting Password</h2>
+     <form class="form-horizontal" method="post" action = "/send">
+<!-- Email input-->
+         <div class="form-group">
+             <h3><label class="col-md-4 col-lg-4 col-sm-4 control-label" for="textinput">Email<sup>*</sup></label></h3>
+             <div class="col-md-7 col-lg-7 col-sm-6">
+                 <input name="email_reset" type="email" placeholder="abc@gamil.com" class="form-control input-md" ng-model = "email_reset" required>
+                 <span style="color:red" ng-show = "myform.email_login.$dirty && myform.email_login.$invalid">Invalid Email </span>
+             </div>
+         </div>
+<!-- Button (Double) -->
+         <div class="form-group">
+         <div class="text-center">
+         <button  class="btn btn-danger btn-md button"  ng-disabled="myform.email_login.$invalid">Submit</button>
+         </div>
+         </div>
+     </form>
+    <div class="text-center">
+         <button class = "button2 btn btn-info" name="registerbutton" ng-click="register()">Back to Regsister</button>
+     </div>
+</div>
+</div>
+<!-- All the Scripts-->
+<script src="/a/js/jquery.js"></script>
+<script src="/a/js/bootstrap.js"></script>
+<script src="/a/js/angular.js"></script>
+<script src="/a/js/form.js"></script>
+</body>
+</html>

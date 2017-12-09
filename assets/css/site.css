@@ -1,0 +1,154 @@
+.forms{
+    margin-left:70px;
+    margin-top:60px;
+    width:45%;
+}
+.button1{
+    font-size:25px;
+    margin-left:120px
+}
+.button2{
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:15px;
+    margin-left:50px;
+}
+body{
+    background-color: #E8E8E8;
+}
+.bg_image{
+    background: url('/a/images/bg1.jpg') no-repeat fixed center center;
+    height:500px;
+    background-size: cover;
+    text-align: center;
+}
+.navigation
+{
+    margin-top:15px;
+    margin-left:30px;
+    font-size:20px;
+}
+.myfont{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color:#00CC00;
+    font-size:26px;
+    font-weight:bold;
+}
+.myfont2{
+    font-family:roboto;
+    color:#fff;
+    font-size:26px;
+    font-weight:bold;
+}
+.nav-ul{
+    list-style-type:none;
+    margin-top:15px;
+}
+.nav-list{
+    margin-left:20px;
+    display:inline;
+    text-decoration:underline;
+}
+.contact{
+    margin-top:5px;
+    float:right;
+    margin-right:40px;
+    color:#00CC00;
+}
+ a:link {
+    color:blue;
+}
+a:visited {
+    text-decoration:underline;
+}
+a:active {
+    color: Red;
+    text-decoration:none;
+}
+a:hover {
+    color: Blue;
+    text-decoration:none;
+}
+.cityhead{
+    margin-left:30px;
+    font-weight:bolder;
+}
+.images{
+    width:150px;
+    height:120px;
+}
+.bg-color{
+    background-color:#FFFFFF;
+    color:black;
+}
+.img-head{
+    margin-left:30px;
+    font-weight:bold;
+}
+.img-description{
+    margin-left:35px;
+} 
+
+.sizeimg{
+    height:42px;
+}
+.localities-list{
+    font-size:18px;
+    list-style-type:none;
+    text-decoration:none;
+    color:	#2F4F4F;
+}
+.grey-text{
+    color:#89959B;
+}
+footer{
+    background-color:black;
+    color:#ffffff;
+    margin-top:20px;
+}
+.mylogo{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color:#FF2400;
+    font-size:36px;
+    font-weight:bold;
+}
+.card_logo{
+    margin-top:70px;
+    margin-left:100px;
+    width:50%;
+}
+.card_logo2{
+    margin-top:90px;
+    margin-left:220px;
+    width:50%;
+}
+.img_kit{
+    margin-left:25px;
+    margin-top:10px;
+    width:85%;
+    height:90%;
+    margin-bottom:20px;
+}
+.img_rest{
+    margin-left:25px;
+    margin-top:10px;
+    width:85%;
+    height:250px;
+    margin-bottom:20px;
+}
+.options{
+    color:navy;
+    font-size:28px;
+}
+.color_navy{
+    color:navy;
+    font-weight: bold;
+}
+a:hover{
+    text-decoration:underline;
+    color:red;
+}
+.font_big{
+    font-size:20px;
+    margin-top:10px;
+}

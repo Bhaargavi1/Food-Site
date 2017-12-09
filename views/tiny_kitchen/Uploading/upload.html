@@ -1,0 +1,78 @@
+<!Doctype HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, user-scalable=yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel = "stylesheet" href = "/a/css/bootstrap.css">
+<link rel = "stylesheet" href = "/a/css/w3css.css">
+<link rel = "stylesheet" href = "/a/css/site.css">
+<link rel = "stylesheet" href = "/a/css/recipe.css">
+<title>Tiny  Kitchen</title>
+</head>
+<!-- AJS Controller used -->
+<body style = "background-color:lightgray">
+   <nav class="navbar navbar-inverse">
+       <div class="container-fluid">
+           <div class="navbar-header">
+               <div class=" myfont" style = 'font-size:40px;'><i>MY Tiny Kitchen</i></div>
+           </div>
+           <ul class="nav navbar-nav navbar-left" style = 'margin-left:100px;'>
+               <li><a href="/tiny_kit">Intro</a></li>
+               <li class = 'active'><a href="/upload">Upload Dishes</a></li>
+               <li><a href="/view_recipe">View Recipes</a></li>
+               <li><a href="/review">View Reviews</a></li>
+           </ul>
+           <ul class="nav navbar-nav navbar-right" style = 'margin-right:40px;'>
+               <li><a href="/main">Home Page</a></li>
+               <li><a href="/">Logout</a></li>
+           </ul>
+        </div>
+</nav>  
+    <h2 class = 'text-center color_navy'>My Dish</h2>
+    <div class = 'w3-card-4 w3-white card_recipe'>
+        <form name = 'Form_recipe' method="post" action = '/recipe_save'>
+           <div class="form-group row">
+              <h3><label class="col-md-3 col-lg-3 col-sm-3 col-xs-12 control-label" for="textinput" style = 'margin-top:20px;'>Name of the Chef<sup>*</sup></label></h3>
+              <div class="col-lg-8  col-md-8 col-sm-7 col-xs-12"  style = 'margin-top:10px;'>
+                 <input name="name_chef" type="text"  class="form-control input-lg" required>
+               </div>
+           </div>
+           <div class="form-group row">
+              <h3><label class="col-md-3 col-lg-3 col-sm-3 col-xs-12 control-label" for="textinput" style = 'margin-top:20px;'>Name of the Dish<sup>*</sup></label></h3>
+              <div class="col-lg-8  col-md-8 col-sm-7 col-xs-12"  style = 'margin-top:10px;'>
+                 <input name="name_dish" type="text" placeholder="Whole Wheat Pasta" class="form-control input-lg" required>
+               </div>
+           </div>
+           <div class="form-group row">
+              <h3><label class=" col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label" for="textinput">Total Cook Time<sup>*</sup></label></h3>
+              <div class="col-lg-8  col-md-8 col-sm-7 col-xs-12"  style = 'margin-top:10px;'>
+                 <input name="cook_time" type="text" class="form-control input-lg" required placeholder = '35 minutes'>
+               </div>
+           </div>
+           <div class="form-group row">
+              <h3><label class="col-md-3 col-lg-3 col-sm-3 col-xs-12 control-label" for="textinput">Ingredients Required<sup>*</sup></label></h3>
+              <div class="col-lg-8  col-md-8 col-sm-7 col-xs-12"  style = 'margin-top:10px;'>
+                 <textarea name="ingred" class = 'ingred' required>Write Ingredients in Separate Lines</textarea>
+               </div>
+           </div>
+           <div class="form-group row">
+              <h3><label class="col-md-3 col-lg-3 col-sm-3 col-xs-12 control-label" for="textinput">Your Recipie<sup>*</sup></label></h3>
+              <div class="col-lg-8  col-md-8 col-sm-7 col-xs-12"  style = 'margin-top:10px;'>
+                 <textarea name="recipe" class = 'recipe' required>Try to write Step wise in around 10 steps so people can understand it easily. Use new line after each step.</textarea>
+               </div>
+           </div>
+           <div class="form-group row">
+                 <div class = 'col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center'>
+                 <button class="btn btn-primary btn-lg button_save" >Save The Recipe</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="/a/js/jquery.js"></script>
+<script src="/a/js/bootstrap.js"></script>
+<script src="/a/js/angular.js"></script>
+<script src="/a/js/recipe.js"></script>
+</html>
